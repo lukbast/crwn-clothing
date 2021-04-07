@@ -21,6 +21,12 @@
     border-radius: 20px;
   }
 
+  .empty-msg {
+    font-size: 18px;
+    margin: 50px auto;
+  }
+
+
   .cart-items {
     height: 240px;
     display: flex;
@@ -31,5 +37,11 @@
   button {
     margin-top: auto;
   }
+
+  .link{
+    display: flex;
+    justify-content: center;
+  }
+
 }
 
