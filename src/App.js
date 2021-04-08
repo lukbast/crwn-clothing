@@ -17,7 +17,6 @@ import {auth, createUserProfileDocument} from './firebase/firebase.utils'
 import {createStructuredSelector} from 'reselect'
 import {selectCurrentUser} from './redux/user/user.selectors'
 
-
 class App extends React.Component {
  
   unsubscribeFromAuth = null
@@ -52,9 +51,9 @@ class App extends React.Component {
         <Header/>
         <Switch>
           <Route exact={true} path='/' component={HomePage}/>
-          <Route exact={true} path="/shop" component={ShopPage}/>
           <Route exact={true} path="/checkout" component={CheckoutPage}/>
           <Route exact={true} path='/signin' render={() => this.props.currentUser ? <Redirect to='/'/>: <SignInAndUp/>}/>
+          <Route exact={false} path="/shop" component={ShopPage}/>
         </Switch>
       </div>
     );
