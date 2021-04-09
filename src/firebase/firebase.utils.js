@@ -1,7 +1,16 @@
 import firebase from "firebase/app"
 import 'firebase/firestore'
 import 'firebase/auth'
-import config from '../firebase'
+
+const config ={
+    apiKey: "AIzaSyCCNgHz-zEWKBZUXVhTNSfbvXDpvg9jIwM",
+    authDomain: "crwn-clothing-db-abfa8.firebaseapp.com",
+    projectId: "crwn-clothing-db-abfa8",
+    storageBucket: "crwn-clothing-db-abfa8.appspot.com",
+    messagingSenderId: "944427973665",
+    appId: "1:944427973665:web:f4e72a0a60737c78a83760",
+    measurementId: "G-B6CJ8H7VMG"
+  };
 
 firebase.initializeApp(config);
 
