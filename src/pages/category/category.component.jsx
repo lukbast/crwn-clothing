@@ -15,7 +15,7 @@ const CategoryPage = ({category}) =>(
 )
 
 const mapStateToProps = (state, ownProps) =>({
-    category: selectCategory(ownProps.match.params.categoryId)(state)
+    category: selectCategory(ownProps.match.params.categoryId.toLowerCase())(state)
 })
 
 
