@@ -14,6 +14,49 @@ const config ={
 
 firebase.initializeApp(config);
 
+export const addCollectionAndDocuments = async (collectionName, objectsToAdd) =>{
+    /**
+     * utility function that seeds firebase with shop data
+     * @param {string} collectionName - name of collection that will be created in firebase
+     * @param {object} objectsToAdd - object that have title<string> and items<array>
+     */
+    
+    const collectionRef = firestore.collection(collectionName);
+
+    const batch = firestore.batch()
+
+    objectsToAdd.forEach(obj => {
+        const newDocRef = collectionRef.doc()
+        batch.set(newDocRef, obj)
+    })
+
+
+    return await batch.commit()
+
+}
+
+export const convertCollectionsSnapshotToMap = collections =>{
+    const transformedCollection = collections.docs.map( doc => {
+        const {title, items} = doc.data();
+
+        return{
+            routeName: encodeURI(title.toLowerCase()),
+            id: doc.id,
+            title,
+            items
+
+        }
+    })
+
+    return transformedCollection.reduce
+        (
+            (accumulator, collection)=>
+            {accumulator[collection.title.toLowerCase()] = collection;
+            return accumulator},
+            {}
+        )
+}
+
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
