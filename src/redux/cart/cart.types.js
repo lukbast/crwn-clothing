@@ -3,7 +3,8 @@ const CartActionTypes = {
     ADD_ITEM: 'ADD_ITEM',
     REMOVE_ITEM: 'REMOVE_ITEM',
     DECREASE_QTY: 'DECREASE_QTY',
-    INCREASE_QTY: 'INCREASE_QTY'
+    INCREASE_QTY: 'INCREASE_QTY',
+    CLEAR_CART: 'CLEAR_CART'
 }
 
 export default CartActionTypes
