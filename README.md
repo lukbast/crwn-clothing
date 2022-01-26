@@ -17,5 +17,5 @@ Main folder contains only short script to run the server. Main dish is inside cl
 #### [client/src/firebase](https://github.com/lukbast/crwn-clothing/tree/master/client/src/firebase) - contains code that conects app to firebase
 #### [client/src/pages](https://github.com/lukbast/crwn-clothing/tree/master/client/src/pages) - biggest components that are rendered by React-Router
 #### [client/src/redux](https://github.com/lukbast/crwn-clothing/tree/master/client/src/redux) - redux's state managment code
-#### [client/src](https://github.com/lukbast/crwn-clothing/tree/master/client/src) - except for folders listed above it contains app.jsx and index.jsx that are starting points of the client. Also in there are tests and service workers scripts.
+#### [client/src](https://github.com/lukbast/crwn-clothing/tree/master/client/src) - aside from folders listed above it contains index.jsx that is starting point of the client. Also in there are tests and service workers scripts.
 #### [client/public](https://github.com/lukbast/crwn-clothing/tree/master/client/public) - icons that are displayed in various places in browser.
